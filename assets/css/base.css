@@ -1,0 +1,68 @@
+:root {
+    --primary-color: #250a9c;
+    --heading-color: #151515;
+    --text-color: #333;
+    --white-color: #fff;
+    --black-color: #000;
+    --hover-primary-color: #300fc1;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* font-size mặc định 16px = 100% -> 62.5% = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*Reponsive*/
+.grid {
+    max-width: 100%;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.grid--full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes searchInput {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}

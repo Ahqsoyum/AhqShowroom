@@ -1,0 +1,498 @@
+.header {
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    width: 100%;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.header__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(0, #2608ac, #250a9c);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 0 20px; 
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.header__navbar > .grid {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navbar-logo-img {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    cursor: pointer;
+    top: 2px;
+    border-radius: 2px;
+}
+
+.header__navbar-menu {
+    margin: auto 20px;
+    color: var(--white-color);
+}
+
+.header__navbar-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header__navbar-item {
+    list-style: none;
+    padding: 10px 2px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: 600;  
+    position: relative;
+    margin: 0 14px;
+}
+
+.header__navbar-item:last-child {
+    padding: 10px 16px;
+    margin-right: 36px;
+}
+
+.header__navbar-icon {
+    position: relative;
+    top: 2px;
+    font-size: 1.2rem;
+    left: 1px;
+}
+
+.header__navbar-bicycle {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -12px;
+    background-color: var(--white-color);
+    width: 140px;
+    box-shadow: 0 0 1px 1px #e9eded;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.header__navbar-item-bicycle:hover .header__navbar-bicycle {
+    display: block;
+}
+
+.header__navbar-bicycle::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 67px;
+    border-style: solid;
+    border-width: 10px 12px;
+    border-color: transparent transparent #fff transparent;
+    z-index: 1;
+}
+
+.header__navbar-bicycle::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 0;
+    width: 70%;
+    height: 16px;
+}
+
+.header__navbar-bicycle h4 {    
+    padding: 10px 17px 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+    color: var(--black-color);
+}
+
+.header__navbar-type {
+    list-style: none;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    padding: 0;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+.header__navbar-bicycle-item {
+    padding: 8px 2px;
+    text-align: center;
+}
+
+.header__navbar-bicycle-item:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.header__navbar-bicycle-item:hover a{
+    color: var(--white-color);
+}
+
+.header__navbar-bicycle-item:hover:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-bicycle-item a{
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header__navbar-motobike {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    background-color: var(--white-color);
+    width: 140px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+    box-shadow: 0 0 1px 1px #e9eded;
+}
+ 
+.header__navbar-item-motobike:hover .header__navbar-motobike {
+    display: block;
+}
+
+.header__navbar-motobike::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    right: 41px;
+    border-style: solid;
+    border-width: 10px 12px;
+    border-color: transparent transparent #fff transparent;
+    z-index: 1;
+}
+
+.header__navbar-motobike::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 0;
+    width: 70%;
+    height: 16px;
+}
+
+.header__navbar-motobike h4 {
+    padding: 10px 16px 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+    color: var(--black-color);
+}
+
+.header__navbar-motobike-item {
+    padding: 8px 16px;
+}
+
+.header__navbar-motobike-item:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.header__navbar-motobike-item:hover a{
+    color: var(--white-color);
+}
+
+.header__navbar-motobike-item:hover:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-motobike-item a {
+    text-decoration: none;
+    display: block;
+    color: var(--text-color);
+}
+
+.header__navbar-car {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -22px;
+    background-color: var(--white-color);
+    width: 140px;
+    box-shadow: 0 0 1px 1px #e9eded;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.header__navbar-item-car:hover .header__navbar-car {
+    display: block;
+}
+
+.header__navbar-car::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    right: 48px;
+    border-style: solid;
+    border-width: 10px 12px;
+    border-color: transparent transparent #fff transparent;
+    z-index: 1;
+}
+
+.header__navbar-car::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 0;
+    width: 70%;
+    height: 16px;
+}
+
+.header__navbar-car h4 {
+    padding: 10px 16px 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+    color: var(--black-color);
+}
+
+.header__navbar-car-item {
+    padding: 8px 16px;
+}
+
+.header__navbar-car-item:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.header__navbar-car-item:hover a{
+    color: var(--white-color);
+}
+
+.header__navbar-car-item:hover:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-car-item a {
+    text-decoration: none;
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header__navbar-price-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -22px;
+    background-color: var(--white-color);
+    width: 146px;
+    box-shadow: 0 0 1px 1px #e9eded;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+    padding: 0;
+}
+
+.header__navbar-price:hover .header__navbar-price-list {
+    display: block;
+}
+
+.header__navbar-price-item {
+    list-style: none;
+    padding: 12px 14px;
+}
+
+.header__navbar-price-item:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-price-item:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-price-item:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.header__navbar-price-item:hover a{
+    color: var(--white-color);
+}
+
+.header__navbar-price-item a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.header__navbar-price-list::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 56px;
+    border-style: solid;
+    border-width: 8px 10px;
+    border-color: transparent transparent #fff transparent;
+    z-index: 1;
+}
+
+.header__navbar-price-list::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 0;
+    width: 90%;
+    height: 16px;
+}
+
+.header__navbar-agency {
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.header__navbar-promotion {
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.header__navbar-service-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -32px;
+    background-color: var(--white-color);
+    width: 160px;
+    padding: 0;
+    box-shadow: 0 0 1px 1px #e9eded;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.4s;
+}
+
+.header__navbar-service:hover .header__navbar-service-list {
+    display: block;
+}
+
+.header__navbar-service-list::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 62px;
+    border-width: 8px 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__navbar-service-list::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 24px;
+    height: 20px;
+    width: 100px;
+}
+
+.service-item {
+    list-style: none;
+    padding: 12px 12px;
+    line-height: 1.6rem;
+}
+
+.service-item:hover:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.service-item:hover:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.service-item:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.service-item:hover a {
+    color: var(--white-color);
+}
+
+.service-item a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header__navbar-seach {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    margin-top: 4px;
+    padding: 0 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+#searchToggle {
+    /* display: none; */
+}
+
+/* #searchToggle:checked ~ .search-box {
+    display: flex;
+} */
+
+.search-icon-label {
+    cursor: pointer;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.search-box {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background-color: var(--white-color);
+    box-sizing: border-box;
+    z-index: 1;
+    height: 20px;
+    width: 0;
+    display: none;
+    animation: searchInput ease-in 1s;
+} 
+
+.search-icon-label:focus .search-box {
+    display: block;
+}
+
+#searchInput {
+    width: 160px;
+    line-height: 2rem;
+    border: none;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+/* Container */
+.container {
+    height: 400px;
+    width: 100%;
+    background-color: aqua;
+}
