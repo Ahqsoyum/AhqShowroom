@@ -124,7 +124,7 @@
 
 .header__navbar-bicycle-item {
     padding: 8px 2px;
-    text-align: center;
+    margin-left: 8px;
 }
 
 .header__navbar-bicycle-item:hover {
@@ -513,7 +513,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center ;
+    background-position: center;
 }
 
 .support-background {
@@ -821,30 +821,32 @@
     display: block;
     color: var(--black-color);
     font-weight: 600;
+    margin-bottom: 100px;
 }
 
 .container__service-name:hover {
     color: var(--primary-color);
 }
 
-
-
-
-
-
-
-
-
-
 /*Footer*/
 .footer {
-    margin-top: 100px;  
     display: flex;
     max-width: 100%;
-    min-height: 260px;
+    min-height: 300px;
     align-items: stretch;
-    /* background-image: linear-gradient( to bottom, var(--primary-color), #310fc7); */
     background-color: var(--black-color);
+    position: relative;
+}
+
+.footer::before {
+    content: "Power by Ahqsoyum";
+    position: absolute;
+    color: var(--white-color);
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    text-decoration: underline;
 }
 
 .footer__contact{
