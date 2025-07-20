@@ -28,10 +28,13 @@
 
                                     <ul class="header__navbar-type">
                                         <li class="header__navbar-bicycle-item">
-                                            <a href="">Xe đạp dân dụng</a>
+                                            <a href="">Xe đạp đường phố</a>
                                         </li>
                                         <li class="header__navbar-bicycle-item">
-                                            <a href="">Xe đạp thể thao</a>
+                                            <a href="">Xe đạp địa hình</a>
+                                        </li>
+                                        <li class="header__navbar-bicycle-item">
+                                            <a href="">Xe đạp fixed gear</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -68,6 +71,9 @@
                                         <li class="header__navbar-car-item">
                                             <a href="">Xe thương mại</a>
                                         </li>
+                                        <li class="header__navbar-car-item">
+                                            <a href="">Xe địa hình</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -87,7 +93,7 @@
                                 <a href="" class="header__navbar-agency">Đại lý</a>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="" class="header__navbar-promotion">Khuyến mãi</a>
+                                <a href="" class="header__navbar-promotion">Khuyến mại</a>
                             </li>
                             <li class="header__navbar-item header__navbar-service">
                                 Dịch vụ
@@ -103,7 +109,7 @@
                                         <a href="" class="sercive-link">Giao xe tận nơi</a>
                                     </li>
                                     <li class="service-item">
-                                        <a href="" class="sercive-link">Bảo trì</a>
+                                        <a href="" class="sercive-link">Đăng ký biển số</a>
                                     </li>
                                 </ul>
                             </li>
@@ -126,10 +132,324 @@
         </div>
 
         <!-- Container -->
-        <div class="container"></div>
+        <div class="container">
+                <!-- Background -->
+                <div class="container__background">
+                    <div class="main-background">
+                        <span>Chinh phục nơi hoang dã</span>
+                        <a href="" style="background-image: url(./assets/img/container_img1.webp);"></a>
+                    </div>
+                    <div class="support-background">
+                        <div class="first-background">
+                            <span class="line1">Khám phá</span>
+                            <span class="line2">giới hạn</span>   
+                            <a href="" style="background-image: url(./assets/img/moto_ktm-img.jpg);"></a>
+                        </div>
+                        <div class="second-background"> 
+                            <span class="line1">Mỗi vòng quay</span>
+                            <span class="line2">Một khám phá</span>
+                            <a href="" style="background-image: url(./assets/img/bike_background.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="grid">
+                    <h3 class="container__heading">KHÁM PHÁ CÁC SẢN PHẨM</h3>
+                        <!-- List Car -->
+                        <div class="container__vehicle">
+                            <h4 class="heading">Các mẫu xe ô tô</h4>
+                            <ul class="vehicle-list__type">
+                                <li class="vehicle-list__item vehicle-list__item--active">
+                                    Tất cả
+                                </li>
+                                <li class="vehicle-list__item">
+                                    Xe du lịch
+                                </li>
+                                <li class="vehicle-list__item">
+                                    Xe thương mại
+                                </li> 
+                                <li class="vehicle-list__item">
+                                    Xe địa hình
+                                </li> 
+                            </ul>
+                            
+                            <div class="grid__row">
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/car_dulich-1.jpg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/car_dulich-1.jpg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/car_dulich-1_hover.jpg)'" >
+                                    </div>
+                                        <h4 class="vehicle-name">Honda Civic</h4>
+                                        <span class="vehicle-price">Từ 899.999.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/car_thuongmai-1.jpg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/car_thuongmai-1.jpg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/car_thuongmai-1_hover.jpg)'" >
+                                    </div>
+                                        <h4 class="vehicle-name">Toyota Sienna</h4>
+                                        <span class="vehicle-price">Từ 899.999.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/car_thuongmai-2.jpg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/car_thuongmai-2.jpg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/car_thuongmai-2_hover.jpg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Mitsubishi XFC</h4>
+                                        <span class="vehicle-price">Từ 593.000.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/car_diahinh-1.jpeg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/car_diahinh-1.jpeg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/car_diahinh-1_hover.jpeg)'" ></div>
+                                        <h4 class="vehicle-name">Jeap Wrangler 2019</h4>
+                                        <span class="vehicle-price">Từ 899.999.000 VNĐ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- List Motobike -->
+                        <div class="container__vehicle">
+                            <h4 class="heading">Các mẫu xe máy</h4>
+                            <ul class="vehicle-list__type">
+                                <li class="vehicle-list__item vehicle-list__item--active">
+                                    Tất cả
+                                </li>
+                                <li class="vehicle-list__item">
+                                    Xe côn tay
+                                </li>
+                                <li class="vehicle-list__item">
+                                    Xe số
+                                </li> 
+                                <li class="vehicle-list__item">
+                                    Xe tay ga
+                                </li> 
+                            </ul>
+                            
+                            <div class="grid__row">
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/moto_contay-1.jpeg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/moto_contay-1.jpeg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/moto_contay-1_hover.jpeg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Honda Winner V3</h4>
+                                        <span class="vehicle-price">Từ 47.000.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/moto_contay-2.jpeg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/moto_contay-2.jpeg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/moto_contay-2_hover.jpeg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Yamaha R15 V3</h4>
+                                        <span class="vehicle-price">Từ 46.000.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="car-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/moto_so-1.jpeg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/moto_so-1.jpeg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/moto_so-1_hover.jpeg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Yamaha Jupiter GP FI</h4>
+                                        <span class="vehicle-price">Từ 33.000.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" style="background-image: url(./assets/img/moto_ga-1.jpeg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/moto_ga-1.jpeg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/moto_ga-1_hover.jpeg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Honda SH 160i</h4>
+                                        <span class="vehicle-price">Từ 120.000.000 VNĐ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- List Bike -->
+                        <div class="container__vehicle">
+                            <h4 class="heading">Các mẫu xe đạp</h4>
+                            <ul class="vehicle-list__type">
+                                <li class="vehicle-list__item vehicle-list__item--active">
+                                    Tất cả
+                                </li>
+                                <li class="vehicle-list__item">
+                                    Xe đạp đường phố
+                                </li>
+                                <li class="vehicle-list__item">
+                                    Xe đạp địa hình
+                                </li>
+                                <li class="vehicle-list__item">
+                                    Xe đạp fiexd gear
+                                </li>
+                            </ul>
+                            
+                            <div class="grid__row">
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" 
+                                            style="background-image: url(./assets/img/bike_duongpho-1.jpg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/bike_duongpho-1.jpg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/bike_duongpho-1_hover.jpg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Xe đạp touring RAPTOR Lily 3</h4>
+                                        <span class="vehicle-price">Từ 2.790.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" 
+                                            style="background-image: url(./assets/img/bike_diahinh-1.jpg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/bike_diahinh-1.jpg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/bike_diahinh-1_hover.jpg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Xe đạp đua địa hình MTB RAPTOR Marlin 3</h4>
+                                        <span class="vehicle-price">Từ 10.790.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="car-item">
+                                        <div class="vehicle-img" 
+                                            style="background-image: url(./assets/img/bike_diahinh-2.jpg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/bike_diahinh-2.jpg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/bike_diahinh-2_hover.jpg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Xe đạp đường phố TOURING RAPTOR Napa</h4>
+                                        <span class="vehicle-price">Từ 7.590.000 VNĐ</span>
+                                    </div>
+                                </div>
+                                <div class="grid__column-3">
+                                    <div class="vehicle-item">
+                                        <div class="vehicle-img" 
+                                        style="background-image: url(./assets/img/bike_fixedgear-1.jpg);"
+                                            onmouseout="this.style.backgroundImage='url(./assets/img/bike_fixedgear-1.jpg)'"
+                                            onmouseover="this.style.backgroundImage='url(./assets/img/bike_fixedgear-1_hover.jpg)'" >
+                                        </div>
+                                        <h4 class="vehicle-name">Xe đạp đường phố Fixed Gear VINBIKE Maximus</h4>
+                                        <span class="vehicle-price">Từ 4.990.000 VNĐ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container__section">
+                            <h3>Khuyến mại & Dịch vụ</h3>
+                            <div class="grid__row">
+                                <div class="grid__column-4">
+                                    <a href="" class="container__section-item">
+                                        <div class="container__section-item-img" style="background-image: url(./assets/img/container__section--khuyenmai.webp);"></div>
+                                    </a>    
+                                        <h4 class="container__section-item-name">Khuyến mãi</h4>
+                                        <span class="container__section-item-description">Cập nhật thông tin khuyến mãi và ưu đãi đặc biệt của các dòng xe theo tháng</span>
+                                        <a href="" class="container__section-item-link">
+                                            <span class="container__section-item-link-info">Xem chi tiết</span>
+                                            <i class="container__section-item-icon ti-arrow-right"></i>
+                                        </a>
+                                </div>
+                                <div class="grid__column-4">
+                                    <a href="" class="container__section-item">
+                                        <div class="container__section-item-img" style="background-image: url(./assets/img/container__section--chaythu.webp);"></div>
+                                    </a>    
+                                        <h4 class="container__section-item-name">Đăng ký chạy thử</h4>
+                                        <span class="container__section-item-description">Sử dụng thử trước khi mua các dòng xe mới nhất hoàn toàn miễn phí</span>
+                                        <a href="" class="container__section-item-link">
+                                            <span class="container__section-item-link-info">Xem chi tiết</span>
+                                            <i class="container__section-item-icon ti-arrow-right"></i>
+                                        </a>
+                                </div>
+                                <div class="grid__column-4">
+                                    <a href="" class="container__section-item">
+                                        <div class="container__section-item-img" style="background-image: url(./assets/img/container__section--baohanh.webp);"></div>
+                                    </a>    
+                                        <h4 class="container__section-item-name">Dịch vụ bảo hành</h4>
+                                        <span class="container__section-item-description">Dịch vụ bảo hành chính hãng với đội ngũ chuyên gia tận tâm, đảm bảo sự hài lòng và yên tâm của khách hàng khi mua hàng.</span>
+                                        <a href="" class="container__section-item-link">
+                                            <span class="container__section-item-link-info">Xem chi tiết</span>
+                                            <i class="container__section-item-icon ti-arrow-right"></i>
+                                        </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                       
+                </div>
+                <!-- Container-service -->
+                <div class="grid">
+                    <h4 class="container__service-heading">Dịch vụ khi mua xe</h4>
+                    <div class="grid__row">
+                        <div class="grid__column-3">
+                            <a href="" class="container__service-item">
+                                <div class="container__service-img" style="background-image: url(./assets/img/container__service-dangkybienso.jpg);"></div>
+                                <span class="container__service-name">Đăng ký biển số xe</span>
+                            </a>
+                        </div>
+                        <div class="grid__column-3">
+                            <a href="" class="container__service-item">
+                                <div class="container__service-img" style="background-image: url(./assets/img/container__service-laithu.jpg);"></div>
+                                <span class="container__service-name">Đăng ký chạy thử</span>
+                            </a>
+                        </div>
+                        <div class="grid__column-3">
+                            <a href="" class="container__service-item">
+                                <div class="container__service-img" style="background-image: url(./assets/img/container__service-giaoxe.jpg);"></div>
+                                <span class="container__service-name">Giao xe tận nơi</span>
+                            </a>
+                        </div>
+                        <div class="grid__column-3">
+                            <a href="" class="container__service-item">
+                                <div class="container__service-img" style="background-image: url(./assets/img/container__service-baohanh.jpg);"></div>
+                                <span class="container__service-name">Bảo hành</span>
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+                    
+        </div>
+
 
         <!-- Footer -->
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="footer__contact">
+                <h4 class="footer__contact-heading">Liên hệ</h4>
+                <h5 class="footer__contact-heading-description">Liên hệ với chúng tôi thông qua: </h5>
+                <div class="footer__contact-phone-mail">
+                    <div class="footer__contact-phone">TEL: 0949.405.449</div>
+                    <div class="footer__contact-mail">khongco1ma@gmail.com</div>
+                </div>
+            </div>    
+            <div class="footer__contact-social">
+                <span>Theo dõi</span>
+                <a href="https://www.facebook.com/kyanh.caoo" class="footer__contact-social-item">
+                    <i class="footer__contact-social-icon-facebook ti-facebook"></i>
+                    Facebook
+                </a>
+                <a href="https://www.instagram.com/kyanhcaoxuan/profilecard/" class="footer__contact-social-item">
+                    <i class="footer__contact-social-icon-instargram ti-instagram"></i>
+                    Instargram
+                </a>
+                <a href="https://github.com/Ahqsoyum/ValShowroom" class="footer__contact-social-item">
+                    <i class="footer__contact-social-icon-github ti-github"></i>
+                    Github
+                </a>
+            </div>
+            
+        </div>
     </div>
+
+    
+
 </body>
 </html>

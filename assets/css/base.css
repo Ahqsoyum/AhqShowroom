@@ -27,7 +27,7 @@ body {
 /*Reponsive*/
 .grid {
     max-width: 100%;
-    width: 1300px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
@@ -43,6 +43,21 @@ body {
     flex-wrap: wrap;
     margin-left: -12px;
     margin-right: -12px;
+}
+
+.grid__column-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 25%;
+    height: auto;
+}
+
+.grid__column-4 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 33.3333%;
+    height: auto;
+    position: relative;
 }
 
 
@@ -65,4 +80,14 @@ body {
         transform: translateX(0%);
         opacity: 1;
     }
+}
+
+/* Heading-type */
+.heading {
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding: 12px 0;
+    color: var(--primary-color);
+    cursor: text;
+    margin: 40px 0 10px;
 }
