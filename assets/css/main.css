@@ -928,3 +928,40 @@
     font-size: 1.8rem;
     margin-right: 6px;
 }
+
+/* go-to-header-icon */
+.go-to-header {
+    position: fixed;
+    width: 34px;
+    height: 34px;
+    bottom: 8%;
+    right: 4%;
+    background-color: #d2cccc;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.go-to-header.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+}
+
+
+.go-to-header:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.go-to-header-icon {
+    font-size: 2rem;
+    font-weight: 1000;
+}

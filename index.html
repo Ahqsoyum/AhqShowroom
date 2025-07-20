@@ -447,8 +447,35 @@
             </div>
             
         </div>
+        <div class="go-to-header">
+            <i class="go-to-header-icon ti-arrow-up"></i>
+        </div>
     </div>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const goToHeaderButton = document.querySelector('.go-to-header');
+
+        // Hiển thị/ẩn nút khi cuộn trang
+        window.addEventListener('scroll', function() {
+            // Nếu người dùng cuộn xuống đủ 200px (hoặc giá trị bạn muốn)
+            if (window.pageYOffset > 260) {
+                goToHeaderButton.classList.add('show');
+            } else {
+                goToHeaderButton.classList.remove('show');
+            }
+        });
+
+        // Xử lý sự kiện khi nhấp vào nút
+        goToHeaderButton.addEventListener('click', function() {
+            // Cuộn lên đầu trang với hiệu ứng mượt mà
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Cuộn mượt
+            });
+        });
+    });
+        </script>
     
 
 </body>
