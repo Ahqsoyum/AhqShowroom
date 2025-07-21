@@ -1,0 +1,101 @@
+.khuyenmai-container__main-background {
+    width: 100%;
+    height: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    margin-bottom: 100px;
+    /* position: relative; */
+}
+
+.khuyenmai-container__main-background::before {
+    content: "Khuyến mãi";
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    font-size: 8rem;
+    color: var(--white-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.khuyenmai-container__background {
+    padding-top: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.khuyenmai-container__name {
+    padding: 16px 4px;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.khuyenmai-container__description {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--text-color);
+    line-height: 2.2rem;
+    padding: 12px 4px;
+    height: 200px;
+}
+
+.khuyenmai-container__link {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 20px;
+    text-decoration: none;
+}
+
+.khuyenmai-container__link::before {
+    content: "";
+    position: absolute;
+    border: 1px solid #ccc;
+    bottom: 11%;
+    left: 16px;
+    width: 82%;
+    padding: 0 16px;
+}
+
+.khuyenmai-container__link::after {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--primary-color);
+    bottom: 11%;
+    right: 20px;
+    width: 8%;
+}
+
+.khuyenmai-container__link:hover::before{
+    content: "";
+    position: absolute;
+    border: 1px solid var(--primary-color);
+    bottom: 11%;
+    left: 16px;
+    width: 82%;
+    padding: 0 16px;
+}
+
+.khuyenmai-container__link:hover .khuyenmai-container__icon {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.khuyenmai-container__link span {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.khuyenmai-container__icon {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 42px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,137 @@
+.container_khuyenmai {
+    margin-bottom: 100px;
+}
+
+.khuyenmai_yamahar15v3-container-main-background {
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.khuyenmai_yamahar15v3-heading {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    margin-bottom: 30px;
+}
+
+.khuyenmai_yamahar15v3-info {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.khuyenmai_yamahar15v3-name {
+    font-size: 2rem;
+    margin: 16px 0 24px;
+}
+
+.khuyenmai_yamahar15v3-description {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 50px;
+    line-height: 2.4rem;
+}
+
+.khuyenmai_yamahar15v3-table-price {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: default;
+}
+
+.khuyenmai_yamahar15v3-table-price-list {
+    display: flex;
+    max-width: 900px;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.khuyenmai_yamahar15v3-table-price-list::before {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #ccc;
+    height: 40px;
+    top: 0;
+    right: 50%;
+}
+
+.khuyenmai_yamahar15v3-table-price-item-name {
+    font-size: 1.6rem;
+    font-weight: 400;
+    position: relative;
+    flex: 1;
+}
+
+.khuyenmai_yamahar15v3-table-price-item {
+    font-size: 1.6rem;
+    font-weight: 400;
+    flex: 1;
+}
+
+.khuyenmai_yamahar15v3-guarantee {
+    width: 900px;
+    margin-top: 100px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    margin: 60px auto 0;
+    border: 1px solid #ccc;
+    position: relative;
+    height: 60px;
+}
+
+.khuyenmai_yamahar15v3-guarantee::before {
+    content: "Khuyến mãi bảo hành";
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 700;
+    top: -45%;
+    right: 40%;
+    text-align: center;
+}
+
+.khuyenmai_yamahar15v3-guarantee::after {
+    content: "";
+    position: absolute;
+    height: 59px;
+    border-right: 1px solid #ccc;
+    top: 0;
+    right: 50%;
+}
+
+.khuyenmai_yamahar15v3-guarantee span {
+    flex: 1;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.khuyenmai_yamahar15v3-guarantee-table {
+    flex: 1;
+    text-align: center; 
+    line-height: 2.2rem;
+}
+
+.khuyenmai_yamahar15v3-guarantee-time-true {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.khuyenmai_yamahar15v3-guarantee-time {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-decoration: line-through;
+}

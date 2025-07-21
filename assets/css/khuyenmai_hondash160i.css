@@ -1,0 +1,153 @@
+.container_khuyenmai {
+    margin-bottom: 100px;
+}
+
+.khuyenmai_hondash160i-container-main-background {
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.khuyenmai_hondash160i-heading {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    margin-bottom: 30px;
+}
+
+.khuyenmai_hondash160i-info {
+    width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.khuyenmai_honda160i-name {
+    font-size: 2rem;
+    margin: 16px 0 24px;
+}
+
+.khuyenmai_honda160i-description {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 50px;
+    line-height: 2.4rem;
+}
+
+.khuyenmai_hondash160i-title {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.khuyenmai_hondash160i-title-description {
+    width: 700px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 2.2rem;
+    font-weight: 400;
+    position: relative;
+}
+
+.khuyenmai_hondash160i-title-description::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    bottom: -40px;
+    left: 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.khuyenmai_hondash160i-content {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.khuyenmai_hondash160i-content::before {
+    content: "";
+    position: absolute;
+    width: 88%;
+    bottom: -40px;
+    left: 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.khuyenmai_hondash160i-content-header {
+    display: flex;
+    align-items: center;
+}
+
+.khuyenmai_hondash160i-content-info {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-right: 4px;
+    color: var(--text-color);
+}
+
+.khuyenmai_hondash160i-content-time {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-top: 1px;
+    font-weight: 200;
+    color: var(--text-color);
+}
+
+.khuyenmai_hondash160i-content-check-list {
+    font-size: 1.6rem;
+    margin-top: 24px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.khuyenmai_hondash160i-content-list {
+    padding: 4px 24px;
+}
+
+.khuyenmai_hondash160i-content-item {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 2.2rem;
+}
+
+.khuyenmai_hondash160i-content-item span {
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+.khuyenmai_hondash160i-gift {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.khuyenmai_hondash160i-gift-name {
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 30px 0 12px;
+    line-height: 3rem;
+    color: var(--text-color);
+}
+
+.khuyenmai_hondash160i-gift span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.khuyenmai_hondash160i-gift-list {
+    /* line-height: 2rem; */
+}
+
+.khuyenmai_hondash160i-gift-item {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}

@@ -1,0 +1,183 @@
+.container_khuyenmai {
+    margin-bottom: 160px;
+}
+
+.khuyenmai_hondaCivic-container-main-background {
+    width: 100%;
+    height: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+    margin-bottom: 80px;
+}
+
+.khuyenmai_hondaCivic-heading {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    margin-bottom: 30px;
+}
+
+.khuyenmai_hondaCivic-heading-description {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+.khuyenmai_hondaCivic-info {
+
+}
+
+.khuyenmai_hondaCivic-name {
+    padding-left: 16%;
+    font-size: 2rem;
+    margin: 16px 0 24px ;
+}
+
+.khuyenmai_hondaCivic-description {
+    max-width: 1200px;
+    padding-left: 16%;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    color: var(--text-color);
+}
+
+.khuyenmai_hondaCivic-table-price {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: default;
+}
+
+.khuyenmai_hondaCivic-table-price-list {
+    display: flex;
+    max-width: 600px;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.khuyenmai_hondaCivic-table-price-item-name {
+    font-size: 1.6rem;
+    font-weight: 400;
+    position: relative;
+    flex: 1;
+} 
+
+.khuyenmai_hondaCivic-table-price-item-name::before {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #ccc;
+    height: 40px;
+    top: -12px;
+    right: 20px;
+}
+
+.khuyenmai_hondaCivic-table-price-item {
+    font-size: 1.6rem;
+    font-weight: 400;
+    flex: 1;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #e1dede;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--white-color);
+    position: relative;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-heading::before {
+    position: absolute;
+    content: "";
+    border-right: 1px solid var(--white-color);
+    height: 40px;
+    top: 0;
+    right: 50%;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-heading h5 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-name {
+    flex: 1;
+    text-align: center;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-name span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-list {
+    list-style: none;
+    line-height: 3rem;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 8px 0 0;
+    flex: 1;
+    font-weight: 500;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-item {
+    border-bottom: 1px solid var(--white-color);
+    text-align: center;
+    margin-bottom: 8px;
+    padding: 4px 0;
+}
+
+.khuyenmai_hondaCivic-table-price-sale-of-item:last-child {
+    margin-bottom: 0;
+}
+
+.khuyenmai_hondaCivic-container-last-background {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    margin-top: 70px;
+}
+
+.khuyenmai_hondaCivic-container-last-background::before {
+    content: "Honda Civic RS";
+    position: absolute;
+    height: 20px;
+    width: calc(52% + 9px);
+    bottom: -32px;
+    background-color: #ccc;
+    text-align: center;
+    margin-left: calc(23% + 11px);
+    font-size: 1.6rem;
+    padding: 6px 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
