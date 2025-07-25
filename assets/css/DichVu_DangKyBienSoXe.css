@@ -1,0 +1,157 @@
+.container {
+    width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 140px;
+}
+
+.Dv__heading {
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 16px 0 0;
+    margin: 50px 0 0;
+    text-transform: uppercase;
+}
+
+.Dv__main-background {
+    height: 700px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 20px 0;
+}
+
+.Dv__menu {
+    border: 1px solid var(--black-color);
+    width: 430px;
+    margin-bottom: 60px;
+}
+
+.Dv__menu-heading {
+    display: flex;
+}
+
+.Dv__menu-header {
+    font-size: 1.6rem;
+    margin: 16px 2px 0 26px;
+    padding-left: 66px;
+    font-weight: 600;
+}
+
+.Dv__menu-heading span {
+    margin: auto 0;
+    margin: 16px 1px 0 1px;
+    font-size: 1.5rem;
+
+}
+
+.Dv__menu-mini {
+    display: block;
+    margin: auto 0;
+    margin: 16px 1px 0 1px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.Dv__menu-list {
+
+} 
+
+.Dv__menu-item {
+    line-height: 2.6rem;
+    padding: 3px 0;
+}
+
+.Dv__menu-item a {
+    text-decoration: none;
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.Dv__menu-item-child {
+    padding-left: 12px;
+}
+
+
+/* Dv__content */
+.Dv__content {
+
+}
+
+.Dv__content-header {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+    padding: 8px 0;
+    margin-bottom: 22px;
+}
+
+.Dv__content-text {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 2.2rem;
+    margin-bottom: 18px;
+}
+
+.Dv__content-text-name {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.text {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.text span {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.Dv__content-text-Sign-in {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.Dv__content-text-Sign-in span {
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.Dv__content-text-list {
+    margin-bottom: 16px;
+}
+
+.Dv__content-text-item {
+    font-size: 1.7rem;
+    margin-bottom: 4px;
+    line-height: 2.4rem;
+} 
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 60px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 6px;
+}
+
+th {
+    background: #f2f2f2;
+    text-align: center;
+}
+caption {
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}

@@ -1,0 +1,89 @@
+.container {
+    margin-bottom: 100px;
+}
+
+.main-background {
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 70px;
+}
+
+.Dv__header {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-shadow: 0 0 2px rgb(33, 120, 191);
+    text-transform: uppercase;
+}
+
+.title {
+    color: var(--text-color);
+    font-size: 2.7rem;
+    padding: 24px 0 16px;
+    margin: 36px 0 0;
+    font-weight: 600;
+    display: block;
+}
+
+.content {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.2px;
+    color: var(--text-color);
+}
+
+span {
+    display: block;
+    margin: 30px 0;
+    font-size: 2.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.item {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 2.4rem;
+    margin: 4px 0;
+}
+
+.title-guarantee {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 12px 32px 36px;
+}
+
+table {
+    margin: 20px 0 90px;
+}
+
+td {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.2px;
+    padding: 4px 16px;
+    line-height: 2.7rem;
+}
+
+.title-mini {
+   font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 24px 0 8px; 
+    display: block;
+}
+
+.item-number {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 2.4rem;
+    margin: 4px 0;
+    list-style:decimal ;
+}

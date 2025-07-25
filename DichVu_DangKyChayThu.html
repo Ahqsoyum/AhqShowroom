@@ -1,0 +1,352 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VLA Motions</title>
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/DichVu_DangKyChaythu.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    </head>
+    <body>
+        <div class="main">
+            <!-- Header -->
+            <div class="header">
+                <div class="header__navbar">
+                    <div class="grid">
+                        <div class="header__navbar-logo">
+                            <a href="index.html">
+                                <img src="./assets/img/logo.png" alt="" class="header__navbar-logo-img">
+                            </a>
+                        </div>
+
+                        <div class="header__navbar-menu">
+                            <ul class="header__navbar-list">
+                                <li class="header__navbar-item header__navbar-item-motobike">
+                                    Xe máy
+                                    <i class="header__navbar-icon ti-angle-down"></i>
+                                    <div class="header__navbar-motobike">
+                                        <h4>Loại Xe</h4>
+
+                                        <ul class="header__navbar-type">
+                                            <li class="header__navbar-motobike-item">
+                                                <a href="">Xe côn tay</a>
+                                            </li>
+                                            <li class="header__navbar-motobike-item">
+                                                <a href="xeso.html">Xe số</a>
+                                            </li>
+                                            <li class="header__navbar-motobike-item">
+                                                <a href="">Xe tay ga</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="header__navbar-item header__navbar-item-car">
+                                    Ô Tô
+                                    <i class="header__navbar-icon ti-angle-down"></i>
+                                    <div class="header__navbar-car">
+                                        <h4>Loại Xe</h4>
+
+                                        <ul class="header__navbar-type">
+                                            <li class="header__navbar-car-item">
+                                                <a href="">Xe du lịch</a>
+                                            </li>
+                                            <li class="header__navbar-car-item">
+                                                <a href="">Xe thương mại</a>
+                                            </li>
+                                            <li class="header__navbar-car-item">
+                                                <a href="">Xe địa hình</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="header__navbar-item header__navbar-price">
+                                    Bảng giá
+                                    <i class="header__navbar-icon ti-angle-down"></i>
+                                        <ul class="header__navbar-price-list">
+                                            <li class="header__navbar-price-item">
+                                                <a href="">Xe du lịch</a>
+                                            </li>
+                                            <li class="header__navbar-price-item">
+                                                <a href="">Xe thương mại</a>
+                                            </li>
+                                        </ul>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="daily.html" class="header__navbar-agency">Đại lý</a>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="khuyenmai.html" class="header__navbar-promotion">Khuyến mãi</a>
+                                </li>
+                                <li class="header__navbar-item header__navbar-service">
+                                    Dịch vụ
+                                    <i class="header__navbar-icon ti-angle-down"></i>
+                                    <ul class="header__navbar-service-list">
+                                        <li class="service-item">
+                                            <a href="DichVu_BaoHanh.html" class="sercive-link">Dịch vụ bảo hành</a>
+                                        </li>
+                                        <li class="service-item">
+                                            <a href="DichVu_DangKyChayThu.html" class="sercive-link">Đăng ký chạy thử</a>
+                                        </li>
+                                        <li class="service-item">
+                                            <a href="DichVu_GiaoXe.html" class="sercive-link">Giao xe tận nơi</a>
+                                        </li>
+                                        <li class="service-item">
+                                            <a href="DichVu_DangKyBienSoXe.html" class="sercive-link">Đăng ký biển số</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__navbar-seach ">
+                                    <input type="checkbox" id="searchToggle" hidden>
+
+                                    <label for="searchToggle" class="search-icon-label">
+                                        <i class="ti-search"></i> 
+                                    </label>
+
+                                    <div class="search-box ">
+                                        <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Container -->
+            <div class="container">
+                <div class="Dv__main-background" style="background-image: url(./assets/img/DichVu_DangKyChayThu-main-background.png);"></div>
+                <h4 class="Dv_heading">Xin vui lòng điền đầy đủ thông tin bên dưới <span> để đăng ký lái thử cùng AHQ</span></h4>
+
+                <div class="form">
+                    <div class="Dv__header-content">Thông tin lái xe thử</div>
+                    <div class="Dv__name">Mẫu đăng ký lái thử <span class="red">*</span></div>
+                    <div class="Dv__type-vehicle">
+                        <select name="type-vehicle" id="type-vehicle" placeholder = "--Chọn mẫu xe" required style="font-weight: normal;">
+                            <option value="">--Chọn mẫu xe</option>
+                            <option value="R15V3">Yamaha R15V3</option>
+                            <option value="Civic">Honda Civic</option>
+                            <option value="WinnerV3">Winner V3</option>
+                            <option value="XFC">Mitshubishi XFC</option>
+                            <option value="Fi">Yamaha Jupiter GP Fi</option>
+                        </select>
+                    </div>
+
+                    <div class="grid__row">
+                        <div class="grid__column-6">
+                            <div class="Dv__form">
+                                <label for="title" class="title">Tỉnh thành mong muốn lái thử</label>
+                                <span class="red">*</span>
+                                <div class="input">
+                                    <select name="CityRegister" id="CityRegister">
+                                        <option value="1">Huế</option>
+                                        <option value="2">Đà Nẵng</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="grid__column-6">
+                            <div class="Dv__form">
+                                <label for="title" class="title">Đại lý đăng ký lái thử</label>
+                                <span class="red">*</span>
+                                <div class="input">
+                                    <select name="CityRegister" id="CityRegister">
+                                        <option value="1">AHQ Huế</option>
+                                        <option value="2">AHQ Đà Nẵng</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="grid__column-6">
+                            <div class="Dv__form">
+                                <label for="title" class="title">Tỉnh thành mong muốn lái thử</label>
+                                <span class="red">*</span>
+                                <div class="input">
+                                    <input type="text" placeholder="dd/MM/yyyy" class="date">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="grid__column-6">
+                            <div class="Dv__form">
+                                <label for="title" class="title">Khung giờ mong muốn lái thử</label>
+                                <span class="red">*</span>
+                                <div class="input">
+                                    <input type="text" placeholder="00:00" class="time">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form__customer">
+                        <h4 class="customer-header">Thông tin khách hàng</h4>
+                        <label for="" class="customer-title">Tên khách hàng <span>*</span></label>
+                        
+                        <div class="customer-input">
+                            <i class="ti-user customer-icon"></i>
+                            <input type="text" placeholder="Tên khách hàng">
+                        </div>
+
+                            <div class="grid__row">
+                                <div class="grid__column-6">
+                                    <div class="Dv__form">
+                                        <label for="title" class="title">Tuổi</label>
+                                        <span class="red">*</span>
+                                        <div class="input">
+                                            <input type="text" placeholder="Tuổi" class="time">
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="grid__column-6">
+                                    <div class="Dv__form">
+                                    <label for="title" class="title">Giới tính</label>
+                                        <span class="red">*</span>
+                                        <div class="input">
+                                            <select name="CityRegister" id="CityRegister">
+                                                <option value="0">--Chọn giới tính</option>
+                                                <option value="1">Nam</option>
+                                                <option value="2">Nữ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid__column-6">
+                                    <div class="Dv__form">
+                                        <label for="title" class="title">Số điện thoại</label>
+                                        <span class="red">*</span>
+                                        <div class="input">
+                                            <input type="text" placeholder="09xx.xxx.xxx" class="time">
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <div class="grid__column-6">
+                                    <div class="Dv__form">
+                                    <label for="title" class="title">Tỉnh thành nơi sinh sống</label>
+                                    <span class="red">*</span>
+                                    <div class="input">
+                                        <select name="CityRegister" id="CityRegister">
+                                            <option value="1">TP. Hồ Chính Minh</option>
+                                            <option value="2">Hà Nội</option>
+                                            <option value="3">An Giang</option>
+                                            <option value="4">Bắc Ninh</option>
+                                            <option value="5">Cà Mau</option>
+                                            <option value="6">Cần Thơ</option>
+                                            <option value="7">Cao Bằng</option>
+                                            <option value="8">Đà Nẵng</option>
+                                            <option value="9">Đắk Lắk</option>
+                                            <option value="10">Điện Biên</option>
+                                            <option value="11">Đồng Nai</option>
+                                            <option value="12">Đồng Tháp</option>
+                                            <option value="13">Gia Lai</option>
+                                            <option value="14">Hà Tĩnh</option>
+                                            <option value="15">Hải Phòng</option>
+                                            <option value="16">Hưng Yên</option>
+                                            <option value="17">Khánh Hòa</option>
+                                            <option value="18">Lai Châu</option>
+                                            <option value="19">Lâm Đồng</option>
+                                            <option value="20">Lạng Sơn</option>
+                                            <option value="21">Lào Cai</option>
+                                            <option value="22">Nghệ An</option>
+                                            <option value="23">Ninh Bình</option>
+                                            <option value="24">Phú Thọ</option>
+                                            <option value="25">Quảng Ngãi</option>
+                                            <option value="26">Quảng Ninh</option>
+                                            <option value="27">Quảng Trị</option>
+                                            <option value="28">Sơn La</option>
+                                            <option value="29">Thành Phố Huế</option>
+                                            <option value="30">Tây Ninh</option>
+                                            <option value="31">Thái Nguyên</option>
+                                            <option value="32">Thanh Hóa</option>
+                                            <option value="33">Tuyên Quang</option>
+                                            <option value="34">Vĩnh Long</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                                </div>
+                                
+                                
+                            </div>
+                    </div>
+
+                    <div class="Dv__note">
+                        <h5 class="note-header">Ghi chú: Chương trình lái thử xe chỉ dành cho những khách hàng đã có bằng lái xe phù hợp với loại xe đăng ký lái thử.</h5>
+                        <p>Bằng việc cung cấp thông tin cho AHQ Việt Nam, Quý khách đồng ý với Chính Sách Quyền Riêng Tư của AHQ Việt Nam tại website này, theo đó cho phép chúng tôi và
+                            các bên liên quan xử lý dữ liệu cá nhân của Quý khách cho mục đích liên hệ mời tham gia lái thử. Nếu Quý khách không đồng ý hoặc có ý kiến nào khác, vui lòng thông tin lại với chúng tôi.
+                        </p>
+                    </div>
+
+                    <div class="customer-btn">
+                        <button>Đăng ký ngay
+                            <i class="ti-arrow-right btn-icon"></i>
+
+                        </button>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer__contact">
+                    <h4 class="footer__contact-heading">Liên hệ</h4>
+                    <h5 class="footer__contact-heading-description">Liên hệ với chúng tôi thông qua: </h5>
+                    <div class="footer__contact-phone-mail">
+                        <div class="footer__contact-phone">TEL: 0949.405.449</div>
+                        <div class="footer__contact-mail">khongco1ma@gmail.com</div>
+                    </div>
+                </div>    
+                <div class="footer__contact-social">
+                    <span>Theo dõi</span>
+                    <a href="https://www.facebook.com/kyanh.caoo" class="footer__contact-social-item">
+                        <i class="footer__contact-social-icon-facebook ti-facebook"></i>
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/kyanhcaoxuan/profilecard/" class="footer__contact-social-item">
+                        <i class="footer__contact-social-icon-instargram ti-instagram"></i>
+                        Instargram
+                    </a>
+                    <a href="https://github.com/Ahqsoyum/ValShowroom" class="footer__contact-social-item">
+                        <i class="footer__contact-social-icon-github ti-github"></i>
+                        Github
+                    </a>
+                </div>
+            </div>
+            <div class="go-to-header">
+                <i class="go-to-header-icon ti-arrow-up"></i>
+            </div>
+        </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+            const goToHeaderButton = document.querySelector('.go-to-header');
+
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 260) {
+                    goToHeaderButton.classList.add('show');
+                } else {
+                    goToHeaderButton.classList.remove('show');
+                }
+            });
+
+            goToHeaderButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+            </script>
+        
+
+    </body>
+    </html>
