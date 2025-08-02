@@ -161,16 +161,13 @@ p {
     margin-bottom: 50px;
 }
 
-.customer-btn {
+.send-btn {
     margin-left: 300px;
     /* position: relative;  */
 }
 
-.customer-btn:hover {
+.send-btn button:hover {
     background-color: var(--primary-color);
-}
-
-.customer-btn:hover button {
     color: var(--white-color);
 }
 

@@ -13,7 +13,7 @@
         <div class="main">
             <!-- Header -->
             <div class="header">
-                <div class="header__navbar">
+            <div class="header__navbar">
                     <div class="grid">
                         <div class="header__navbar-logo">
                             <a href="index.html">
@@ -85,23 +85,22 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="header__navbar-seach ">
-                                    <input type="checkbox" id="searchToggle" hidden>
-
-                                    <label for="searchToggle" class="search-icon-label">
-                                        <i class="ti-search"></i> 
-                                    </label>
+                                <li class="header__navbar-seach">
+                                    <div for="" class="search-icon">
+                                        <i class="ti-search"></i>
+                                    </div>
 
                                     <div class="search-box ">
                                         <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                                        <i class="ti-close search-close-icon"></i>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     
-                </div>
             </div>
+        </div>
 
             <!-- Container -->
             <div class="container">
@@ -271,10 +270,9 @@
                         </p>
                     </div>
 
-                    <div class="customer-btn">
+                    <div class="send-btn">
                         <button>Đăng ký ngay
                             <i class="ti-arrow-right btn-icon"></i>
-
                         </button>
                     </div>
 
@@ -312,29 +310,48 @@
             <div class="go-to-header">
                 <i class="go-to-header-icon ti-arrow-up"></i>
             </div>
+
+
+            <div class="modal">
+            <div class="modal__overplay"></div>
+            <div class="modal__body">
+                <div class="modal-contact">
+                    <i class="ti-check modal-contact-icon"></i>
+                    <h4 class="modal-contact-heading">Gửi thông tin thành công</h4>
+                    <label for="" class="modal-contact-label">Cảm ơn bạn đã liên hệ với AHQ Showroom. Chúng tôi sẽ phản hồi lại trong thời gian sớm nhất</label>
+                    <button class="modal-contact-btn">Đóng</button>
+                </div>
+            </div>
+        </div>
+
         </div>
 
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
-            const goToHeaderButton = document.querySelector('.go-to-header');
+            document.addEventListener('DOMContentLoaded', function() {
+        const goToHeaderButton = document.querySelector('.go-to-header');
 
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 260) {
-                    goToHeaderButton.classList.add('show');
-                } else {
-                    goToHeaderButton.classList.remove('show');
-                }
-            });
+        // Hiển thị/ẩn nút khi cuộn trang
+        window.addEventListener('scroll', function() {
+            // Nếu người dùng cuộn xuống đủ 200px (hoặc giá trị bạn muốn)
+            if (window.pageYOffset > 260) {
+                goToHeaderButton.classList.add('show');
+            } else {
+                goToHeaderButton.classList.remove('show');
+            }
+        });
 
-            goToHeaderButton.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+        // Xử lý sự kiện khi nhấp vào nút
+        goToHeaderButton.addEventListener('click', function() {
+            // Cuộn lên đầu trang với hiệu ứng mượt mà
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Cuộn mượt
             });
         });
-            </script>
-        
+    });
+        </script>
+    
+    <script src="./assets/js/main.js"></script>
 
     </body>
     </html>

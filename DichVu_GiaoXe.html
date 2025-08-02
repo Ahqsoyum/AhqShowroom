@@ -13,7 +13,7 @@
     <div class="main">
         <!-- Header -->
         <div class="header">
-                <div class="header__navbar">
+            <div class="header__navbar">
                     <div class="grid">
                         <div class="header__navbar-logo">
                             <a href="index.html">
@@ -85,23 +85,22 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="header__navbar-seach ">
-                                    <input type="checkbox" id="searchToggle" hidden>
-
-                                    <label for="searchToggle" class="search-icon-label">
-                                        <i class="ti-search"></i> 
-                                    </label>
+                                <li class="header__navbar-seach">
+                                    <div for="" class="search-icon">
+                                        <i class="ti-search"></i>
+                                    </div>
 
                                     <div class="search-box ">
                                         <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                                        <i class="ti-close search-close-icon"></i>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     
-                </div>
             </div>
+        </div>
             
         <!-- Container -->
         <div class="container">
@@ -238,7 +237,7 @@
         </div>
     </div>
 
-        <script>
+    <script>
             document.addEventListener('DOMContentLoaded', function() {
         const goToHeaderButton = document.querySelector('.go-to-header');
 
@@ -263,6 +262,6 @@
     });
         </script>
     
-
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

@@ -199,6 +199,7 @@
     padding-top: 40px;
     font-size: 3.6rem;
     font-weight: 700;
+    color: var(--primary-color);
 }
 
 .daily-container__contact-info {
@@ -246,7 +247,7 @@
     font-weight: 300;
 }   
 
-.daily-container__contact-btn {
+.send-btn {
     padding: 12px 120px;
     margin-left: 41%;
     background-color: var(--primary-color);
@@ -255,4 +256,8 @@
     margin-bottom: 60px;
     border: none;
     border-radius: 2px;
+}
+
+.send-btn:hover {
+    background-color: #2d0eb7;
 }

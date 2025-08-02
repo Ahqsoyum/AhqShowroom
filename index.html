@@ -12,7 +12,7 @@
     <div class="main">
         <!-- Header -->
         <div class="header">
-                <div class="header__navbar">
+            <div class="header__navbar">
                     <div class="grid">
                         <div class="header__navbar-logo">
                             <a href="index.html">
@@ -84,23 +84,22 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="header__navbar-seach ">
-                                    <input type="checkbox" id="searchToggle" hidden>
-
-                                    <label for="searchToggle" class="search-icon-label">
-                                        <i class="ti-search"></i> 
-                                    </label>
+                                <li class="header__navbar-seach">
+                                    <div for="" class="search-icon">
+                                        <i class="ti-search"></i>
+                                    </div>
 
                                     <div class="search-box ">
                                         <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                                        <i class="ti-close search-close-icon"></i>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     
-                </div>
             </div>
+        </div>
 
         <!-- Container -->
         <div class="container">
@@ -108,18 +107,18 @@
                 <div class="container__background">
                     <div class="main-background">
                         <span>Chinh phục nơi hoang dã</span>
-                        <a href="" style="background-image: url(./assets/img/container_img1.webp);"></a>
+                        <a href="xediahinh.html" style="background-image: url(./assets/img/container_img1.webp);"></a>
                     </div>
                     <div class="support-background">
                         <div class="first-background">
                             <span class="line1">Khám phá</span>
                             <span class="line2">giới hạn</span>   
-                            <a href="" style="background-image: url(./assets/img/moto_ktm-img.jpg);"></a>
+                            <a href="xecon.html" style="background-image: url(./assets/img/moto_ktm-img.jpg);"></a>
                         </div>
                         <div class="second-background"> 
-                            <span class="line1">Mỗi vòng quay</span>
-                            <span class="line2">Một khám phá</span>
-                            <a href="" style="background-image: url(./assets/img/bike_background.jpg);"></a>
+                            <span class="line1">Đỉnh sắc</span>
+                            <span class="line2">Độc tôn</span>
+                            <a href="xetayga.html" style="background-image: url(./assets/img/sh_background.jpg);"></a>
                         </div>
                     </div>
                 </div>
@@ -130,18 +129,19 @@
                         <div class="container__vehicle">
                             <h4 class="heading">Các mẫu xe ô tô</h4>
                             <ul class="vehicle-list__type">
-                                <li class="vehicle-list__item vehicle-list__item--active">
+                                <li class="vehicle-list__item car__all vehicle-list__item--active">
                                     Tất cả
                                 </li>
-                                <li class="vehicle-list__item">
+                                <li class="vehicle-list__item car__travel">
                                     Xe du lịch
                                 </li>
-                                <li class="vehicle-list__item">
+                                <li class="vehicle-list__item car__commerce">
                                     Xe thương mại
                                 </li> 
-                                <li class="vehicle-list__item">
+                                <li class="vehicle-list__item car__terrain">
                                     Xe địa hình
-                                </li> 
+                                </li>
+                                <span class="slider"></span> 
                             </ul>
                             
                             <div class="grid__row">
@@ -203,6 +203,7 @@
                                 <li class="vehicle-list__item">
                                     Xe tay ga
                                 </li> 
+                                <span class="slider"></span>
                             </ul>
                             
                             <div class="grid__row">
@@ -381,6 +382,8 @@
     });
         </script>
     
+
+        <script src="./assets/js/main.js"></script>
 
 </body>
 </html>
