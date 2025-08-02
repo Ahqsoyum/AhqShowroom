@@ -84,3 +84,23 @@ if(moreBtn) {
         }
     });
 }
+
+/* Advertisement */
+window.addEventListener('DOMContentLoaded', (event) => {
+    var adElement = document.querySelector('.advertisement');
+    if(adElement) {
+        setTimeout(function() {
+            adElement.classList.add('advertisement--active');
+        }, 5000)
+    }
+})
+
+var adCloseIcon = document.querySelector('.ad-close-icon');
+if (adCloseIcon) {
+    adCloseIcon.addEventListener('click', function(e) {
+        var adHasActive = document.querySelector('.advertisement--active');
+        if(adHasActive) {
+            adHasActive.classList.remove('advertisement--active');
+        }
+    });
+}
