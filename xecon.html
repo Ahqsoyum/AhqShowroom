@@ -114,7 +114,7 @@
                             <option value="">Giá từ cao đến thấp</option>
                         </select>
                         <div class="xe__label">
-                            <span class="xe__label-text">Hãng xe</span>
+                            <span class="xe__label-text">thương hiệu</span>
                         </div>
                         <div class="xe__wrap">
                             <div class="xe__wrap-item">
@@ -230,10 +230,10 @@
                     </div>
                     <!-- Product -->
                     <div class="grid__column-9">
-                        <div class="grid__row">
-                            <div class="grid__column-9-3">
+                        <div class="grid__row" id="product-list">
+                            <!-- <div class="grid__column-9-3">
                                 <div href="" class="product">
-                                    <a href="" class="product-img" style="background-image: url(./assets/img_xeso/xeso_gpx-rock-110.jpeg);"></a>
+                                    <a href="" class="product-img" style="background-image: url(./assets/product__img/img__xecontay/honda-winner-v3__black.jpeg);"></a>
                                     <h4 class="product-name">GPX ROCK 110</h4>
                                     <div class="product-price">19.900.000</div>
                                     <label for="" class="product-label">Từ GPX Thái Lan</label>
@@ -242,7 +242,7 @@
                                         <a href="xecon.html" class="product-type__link">xe côn tay</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             
                         </div>
                     </div>
@@ -336,5 +336,35 @@
         </script>
     
     <script src="./assets/js/main.js"></script>
+    
+    <script src="./assets/js/xecontay.js" type="module"></script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyBYtN_VGCoM81scfTU0eykE3TYYmoQcXOo",
+    authDomain: "ahqshowroom-95a8f.firebaseapp.com",
+    databaseURL: "https://ahqshowroom-95a8f-default-rtdb.firebaseio.com",
+    projectId: "ahqshowroom-95a8f",
+    storageBucket: "ahqshowroom-95a8f.firebasestorage.app",
+    messagingSenderId: "149622911619",
+    appId: "1:149622911619:web:53a558e7478677525ee1b6",
+    measurementId: "G-XEG4BFSPZ7"
+  };
+
+  // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+
+    window.database = database;
+    </script>
 </body>
 </html>

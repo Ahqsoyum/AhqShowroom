@@ -32,15 +32,22 @@
     letter-spacing: 0.2px;
 }
 
-.xe__wrap-item {
+.xe__wrap-item {    
     font-size: 1.6rem;
     margin: 10px 0;
     color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 .xe__wrap-labbel {
     cursor: pointer;
-    padding: 4px;
 }
 
 button {
@@ -72,12 +79,14 @@ button:hover {
 }
 
 .product-name {
-    margin: 16px 0 24px;
+    margin: 6px 0 24px;
     text-align: center;
     font-size: 2.2rem;
     color: var(--primary-color);
     font-weight: 700;
     cursor: default;
+    height: 50px;
+    line-height: 3rem;
 }
 
 .product-price {

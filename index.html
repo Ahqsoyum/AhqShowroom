@@ -123,6 +123,8 @@
                     </div>
                 </div>
             
+                <div id="message-list"></div>
+
                 <div class="grid">
                     <h3 class="container__heading">KHÁM PHÁ CÁC SẢN PHẨM</h3>
                         <!-- List Car -->
@@ -367,15 +369,15 @@
                         <div class="ad__grid">
                             <div class="ad__row">
                                 <div class="ad__column-6">
-                                    <input type="text" placeholder="Họ tên">
+                                    <input type="text" placeholder="Họ tên" required>
                                 </div>
                                 <div class="ad__column-6">
-                                    <input type="text" placeholder="Họ tên">
+                                    <input type="text" placeholder="Số điện thoại" required>
                                 </div>    
                             </div>
                             <div class="ad__row">
                                 <div class="ad__column-6">
-                                    <input type="text" placeholder="Họ tên">
+                                    <input type="text" placeholder="Địa chỉ" required>
                                 </div>
                                 <div class="ad__column-6">
                                     <select name="daily" id="daily">
@@ -387,9 +389,10 @@
                             </div>
                         </div>
                         <textarea name="textarea" id="textarea" placeholder="Nội dung đăng ký tư vấn"></textarea>
+                        <button class="ad__btn">Gửi yêu cầu tư vấn</button>   
+                        <label for="" class="ad__send-successfull">Gửi yêu cầu thành công</label>
                     </div>
 
-                    <button class="ad__btn">Gửi yêu cầu tư vấn</button>
                 </div>
                 <i class="ti-close ad-close-icon"></i>
             </div>
@@ -422,6 +425,33 @@
         });
     });
         </script>
+
+<!-- <script type="module">
+  // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyBYtN_VGCoM81scfTU0eykE3TYYmoQcXOo",
+    authDomain: "ahqshowroom-95a8f.firebaseapp.com",
+    databaseURL: "https://ahqshowroom-95a8f-default-rtdb.firebaseio.com",
+    projectId: "ahqshowroom-95a8f",
+    storageBucket: "ahqshowroom-95a8f.firebasestorage.app",
+    messagingSenderId: "149622911619",
+    appId: "1:149622911619:web:53a558e7478677525ee1b6",
+    measurementId: "G-XEG4BFSPZ7"
+  };
+
+  // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+</script> -->
     
 
         <script src="./assets/js/main.js"></script>

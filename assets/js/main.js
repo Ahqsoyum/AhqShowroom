@@ -85,6 +85,19 @@ if(moreBtn) {
     });
 }
 
+var moreBtn = document.querySelector('.product__info-performance-btn');
+if(moreBtn) {
+    moreBtn.addEventListener('click', function(e) {
+        var elementContainer = document.querySelector('.vehicle-elementor__container-performance');
+        if(elementContainer) {
+            elementContainer.classList.toggle('elementor__container');
+            if (elementContainer.classList.contains('elementor__container')) {
+                moreBtn.innerHTML = 'Xem thêm';
+            } else moreBtn.innerHTML = 'Thu gọn';
+        }
+    });
+}
+
 /* Advertisement */
 window.addEventListener('DOMContentLoaded', (event) => {
     var adElement = document.querySelector('.advertisement');
@@ -103,4 +116,14 @@ if (adCloseIcon) {
             adHasActive.classList.remove('advertisement--active');
         }
     });
+}
+
+var adSendBtn = document.querySelector('.ad__btn');
+if(adSendBtn) {
+    adSendBtn.addEventListener('click', function(e) {
+        var adLabelSend = document.querySelector('.ad__send-successfull');
+        if(adLabelSend){
+            adLabelSend.classList.add('ad__send-successfull--active');
+        }
+    })
 }
