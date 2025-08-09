@@ -87,10 +87,34 @@ async function initializeProductDetails() {
                 container.innerHTML = `<p>Không tìm thấy sản phẩm.</p>`;
             }
         }); 
+
+        const producInforRef = ref(database, `product/xemay/${type}/${productId}/product_info`);
+        onValue(producInforRef, (snap) => {
+            const productInforData = snap.val();
+            const productInfo = document.querySelector('.vehicle-elementor__container');
+            productInfo.innerHTML = '';
+
+            if(productInforData) {
+                for (const infoData in productInforData) {
+                    const info = productInforData[infoData];
+
+                    const productInfoHtmls = `
+                    <div class="element-list-item-info">
+                        <label for="" class="element-item-label">${info.label}</label>
+                        <span class="element-item-value">${info.value}</span>
+                    </div>
+                    `;
+                    productInfo.innerHTML += productInfoHtmls;
+                }
+            }
+        });
+
     } else {
         const container = document.getElementById('product-details');
         container.innerHTML = `<p>Vui lòng cung cấp đầy đủ thông tin sản phẩm.</p>`;
     }
+
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
