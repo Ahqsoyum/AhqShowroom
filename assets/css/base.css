@@ -74,6 +74,12 @@ body {
     width: 50%;
 }
 
+.grid__column-6-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 33.333%;
+}
+
 .grid__column-9 {
     padding-left: 12px;
     padding-right: 12px;
@@ -121,6 +127,7 @@ body {
     margin: 40px 0 10px;
 }
 
+/* Color */
 .red {
     color: red;
 }

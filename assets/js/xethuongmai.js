@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const productHtmls = `
                     <div class="grid__column-9-3">
                                 <div class="product">
-                                    <a href="product.html?type='xethuongmai'&id=${xeId}" class="product-img" style="background-image: url(${xe.background_img});"></a>
+                                    <a href="car-product.html?type=xethuongmai&id=${xeId}" class="product-img" style="background-image: url(${xe.background_img});"></a>
                                     <h4 class="product-name">${xe.name}</h4>
                                     <div class="product-price">${xe.price}</div>
                                     <label for="" class="product-label">${xe.description}</label>
