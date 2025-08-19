@@ -90,6 +90,7 @@
 }
 
 .khuyenmai_hondaCivic-table-price-sale-of {
+    max-width: 100%;
     width: 1200px;
     margin: 0 auto;
     background-color: #e1dede;
@@ -180,4 +181,42 @@
     padding: 6px 0;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
+}
+
+@media screen and (max-width: 47.9375em) {
+    .khuyenmai_hondaCivic-container-main-background {
+        margin-bottom: 0;
+        background-size: cover;
+        height: 300px;
+    }
+
+    .khuyenmai_hondaCivic-heading {
+        font-size: 2.4rem;
+    }
+
+    .khuyenmai_hondaCivic-heading-description {
+        font-size: 1.4rem;
+        margin: 0 12px;
+    }
+
+    .khuyenmai_hondaCivic-name {
+        padding-left: 7%;
+    }
+
+    .khuyenmai_hondaCivic-description {
+        padding: 0 7%;
+    }
+
+    .khuyenmai_hondaCivic-table-price-sale-of-heading h5 {
+        margin: 14px auto;
+        text-align: center;
+    }
+
+    .khuyenmai_hondaCivic-table-price-sale-of-item {
+        font-size: 1.4rem;
+    }
+
+    .khuyenmai_hondaCivic-container-last-background {
+        height: 300px;
+    }
 }

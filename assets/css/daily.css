@@ -261,3 +261,78 @@
 .send-btn:hover {
     background-color: #2d0eb7;
 }
+
+@media screen and (max-width: 47.9375em) {
+    .daily-container__background {
+        height: 300px;
+        background-size: cover;
+        position: relative;
+    }
+
+    .daily-container__background h4 {
+        font-size: 2.2rem;
+        transform: translateX(-50%);
+        padding-bottom: 16px;
+    }
+
+    .daily-container__background h5 {
+        font-size: 2.4rem;
+        transform: translateX(-50%);
+        padding-bottom: 16px;
+    }
+
+    .daily-container__background h6 {
+        font-size: 2.4rem;
+        transform: translateX(-50%);
+    }
+
+    .daily-container__heading {
+        margin: 40px;
+    }
+
+    .daily-container__name {
+        font-size: 1.8rem;
+    }
+
+    .daily-container__address-description {
+        height: 70px;
+    }
+
+    .daily-container__time-work {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .daily-container__time-shop {
+        margin: 6px 0 8px;
+    }
+
+    .daily-container__time-shop-open {
+        font-size: 1.5rem;
+    }
+
+    .daily-container__hotline-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .daily-container__hotline-name {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .daily-container__contact-tag {
+        margin-left: 6%;
+    }
+    
+    .daily-container__contact-input,
+    .daily-container__content-input {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .send-btn {
+        display: block;
+        margin: auto;
+    }
+}

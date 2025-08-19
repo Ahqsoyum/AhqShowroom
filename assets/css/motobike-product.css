@@ -1,6 +1,7 @@
 .product__main-background {
     height: 400px;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -151,4 +152,45 @@
 
 .product__info-btn--less {
     display: none;
+}
+
+@media screen and (max-width: 47.9375em) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .product__info {
+        margin-bottom: 20px;
+    }
+
+    .product__main-background {
+        max-width: 100% !important; 
+        width: 100vw;    
+        height: 300px;
+        background-size: cover;
+    }
+
+    .product__detail-main-img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .motobike-mobile-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid__column-6 {
+        width: 100%;
+    }
+
+    .product__label-price {
+        margin: 18px 0;
+        display: block;
+    }
+
+    .header__navbar {
+        max-width: 100%;
+    }
 }

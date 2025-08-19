@@ -114,3 +114,59 @@ if(adSendBtn) {
         }
     })
 }
+
+/* Mobile header*/
+var headerBars = document.querySelector('.header-menu-bars');
+var headerMenuMobile = document.querySelector('.header__navbar-menu-mobile');
+var headerCloseIcon = document.querySelector('.header-close-icon');
+headerBars.addEventListener('click', () => {
+    headerMenuMobile.classList.add('header__navbar-menu-mobile--active');
+});
+
+headerCloseIcon.addEventListener('click', () => {
+    headerMenuMobile.classList.remove('header__navbar-menu-mobile--active')
+})
+
+
+var headerNavbarItems = document.querySelectorAll('.header__navbar-item');
+headerNavbarItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            headerNavbarItems.forEach((ortherItem) => {
+                ortherItem.classList.remove('active');
+            });
+            item.classList.add('active');
+        });
+});
+
+/* Chuyển slide*/
+const slides = document.querySelectorAll('.slide');
+  const mainBackground = document.querySelector('.main-background');
+  const supportBackground = document.querySelector('.support-background');
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  const slideInterval = 4000;
+
+  function showSlide(index) {
+    slides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+
+    if (slides[index]) { // Thêm kiểm tra này để đảm bảo slides[index] tồn tại
+      slides[index].classList.add('active');
+    }
+
+    if (index === 0) {
+      supportBackground.classList.add('hide-on-mobile');
+    } else {
+      supportBackground.classList.remove('hide-on-mobile');
+      supportBackground.classList.add('show-on-mobile');
+    }
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  showSlide(currentSlide);
+  setInterval(nextSlide, slideInterval);

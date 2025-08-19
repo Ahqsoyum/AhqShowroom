@@ -199,3 +199,48 @@ button:hover i {
     font-size: 1.6rem;
     color: var(--primary-color);
 }
+
+.Dv_heading-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 47.9375em) {
+    .container {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .Dv__main-background {
+        height: 300px;
+        margin-bottom: 60px;
+    }
+
+    .Dv__main-background::before {
+        left: calc(15% + 4px);
+        font-size: 3.4rem;
+    }
+
+    .Dv_heading {
+       display: none;
+    }
+
+    .Dv_heading-mobile {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        color: var(--primary-color);
+    }
+
+    .title {
+        display: block;
+        height: 48px;
+        margin-bottom: 0;
+        line-height: 2.2rem;
+    }
+
+    .send-btn {
+        margin-left: 27%;
+        display: block;
+    }
+}

@@ -1,10 +1,8 @@
 .header {
-    /* background-color: rgba(255, 255, 255, 0.9); */
     width: 100%;
-    padding-top: 60px;
     box-sizing: border-box;
     z-index: 10;
-    position: relative;
+    position: fixed;
 }
 
 .header__navbar {
@@ -18,6 +16,7 @@
     padding: 0 20px; 
     height: 60px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .header__navbar > .grid {
@@ -369,7 +368,6 @@
     padding: 0 6px;
     cursor: pointer;
     position: relative;
-    /* overflow: hidden; */
 }
 
 .search-icon {
@@ -623,6 +621,7 @@
     font-size: 3rem;
     margin: 16px auto;
     text-align: center;
+    line-height: 3rem;
 }
 
 .container__section-item {
@@ -1103,4 +1102,221 @@ input {
 
 .ad__send-successfull.ad__send-successfull--active {
     display: block;
+}
+
+.header-menu-bars,
+.header-close-icon {
+    display: none;
+}
+
+.main-index {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.header__navbar-menu-mobile {
+    display: none;
+}
+
+.header__navbar-motobike-mobile,
+.header__navbar-car-mobile,
+.header__navbar-service-list-mobile {
+    display: none;
+} 
+
+.header__navbar-service-list-mobile {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    width: 200px;   
+    padding-left: 0;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 47.9375em) {
+    .header__navbar-logo {
+        width: 80px;
+        height: 90px;
+        top: 15px;
+        position: relative;
+    }
+
+    .header__navbar-menu {
+        display: none;
+    }
+
+    .header-menu-bars {
+        display: block;
+        font-size: 2.6rem;
+        padding: 4px; 
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--white-color);
+    }
+
+    .header__navbar-menu-mobile {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--white-color);
+        box-shadow: 0 0 0 1px #888;
+        width: 230px;
+        max-width: 100%;
+        transform: translateX(100%); /* Ẩn menu bằng cách đẩy nó ra ngoài màn hình */
+        opacity: 0;
+        visibility: hidden; /* Đảm bảo menu không thể truy cập được khi ẩn */
+        transition: transform 0.3s ease-in, opacity 0.3s ease-in, visibility 0.3s ease-in;
+    }
+
+    .header__navbar-menu-mobile.header__navbar-menu-mobile--active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header__navbar-list-mobile {
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+
+    .header__navbar-item {
+        color: var(--black-color);
+        margin-top: 16px;
+    }
+
+    .header__navbar-agency,
+    .header__navbar-promotion {
+        color: var(--black-color);
+    }
+
+    .header__navbar-service.header__navbar-item {
+        padding-left: 0;
+    }
+
+    .header-close-icon {
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 12px;
+        font-size: 2.2rem;
+        padding: 10px;
+        color: var(--black-color);
+        margin-bottom: 30px;
+    }
+
+    .header__navbar-item.active .header__navbar-motobike-mobile,
+    .header__navbar-item.active .header__navbar-car-mobile,
+    .header__navbar-item.active .header__navbar-service-list-mobile {
+        display: block;
+    }
+
+    .header__navbar-type {
+        margin-top: 20px;
+    }
+
+    .header__navbar-motobike-item {
+        font-size: 1.7rem;
+    }
+
+    .header__navbar-item.header__navbar-service-mobile {
+        padding-left: 0px;
+    }
+
+
+    /* Container */
+
+    .container__background {
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+        height: 300px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .show-on-mobile {
+        display: block;
+    }
+
+    .main-background a,
+    .first-background a,
+    .second-background a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-background span {
+        top: 70%;
+        left: 6%;
+        line-height: 4.2rem;
+    }
+    
+    .slide {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    .container__heading {
+        display: none;
+    }
+
+    .container__vehicle {
+        display: none;
+    }
+
+    .first-background .line2 {
+        top: 20%;   
+    }
+
+    .section-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-container .grid__column-4 {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .container__service-heading::before {
+        width: 85vw;
+    }
+
+    .service-container {
+        flex-wrap: wrap;
+    }
+
+    .service-container .grid__column-3 {
+        width: 50%;
+        height: 200px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+
+    .footer__contact,
+    .footer__contact-social {
+        margin: 0 60px;
+        text-align: center;
+    }
 }

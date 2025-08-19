@@ -14,7 +14,7 @@
 
 .Dv__main-background {
     height: 700px;
-    width: 100%;
+    max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -36,13 +36,6 @@
     margin: 16px 2px 0 26px;
     padding-left: 66px;
     font-weight: 600;
-}
-
-.Dv__menu-heading span {
-    margin: auto 0;
-    margin: 16px 1px 0 1px;
-    font-size: 1.5rem;
-
 }
 
 .Dv__menu-mini {
@@ -78,7 +71,7 @@
 
 /* Dv__content */
 .Dv__content {
-
+    max-width: 100%;
 }
 
 .Dv__content-header {
@@ -154,4 +147,51 @@ caption {
     font-style: italic;
     margin-bottom: 8px;
     color: var(--text-color);
+}
+
+@media screen and (max-width: 47.9375em) {
+    .grid__column-9 {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Dv__main-background {
+        height: 400px;
+        width: 100%;
+        background-size: contain;
+        margin-left: 12px;
+        display: block;
+    }
+
+    .Dv__heading {
+        font-size: 2.6rem;
+        line-height: 3rem; 
+        margin-left: 12px;  
+    }
+
+    .Dv__menu {
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 12px;
+    }
+
+    .Dv__menu-list {
+        padding-left: 12px;
+    }
+
+    .Dv__content {
+        margin-left: 12px;
+    }
+
+    .Dv__content-header {
+        font-size: 1.9rem;
+    }
+
+    .Dv__content-text {
+        font-size: 1.7rem;
+    }
 }

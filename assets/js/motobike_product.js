@@ -21,7 +21,7 @@ async function initializeProductDetails() {
             if (data) {
                 const productHtmls = `
                 <h4 class="product__header">${data.name}</h4>
-                <div class="grid__row">
+                <div class="grid__row motobike-mobile-container">
                     <div class="grid__column-6">
                         <div class="product__detail-main-img" style="background-image: url(${data.background_img});"></div>
                         <div class="product__detail-mini-img">

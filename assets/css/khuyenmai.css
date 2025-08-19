@@ -99,3 +99,33 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 47.9375em) {
+    .khuyenmai-container__main-background {
+        width: 100%;
+        height: 300px;
+        position: relative;
+    }
+
+    .khuyenmai-container__main-background::before {
+        content: "Khuyến mãi";
+        position: absolute;
+        bottom: 20%;
+        left: 8%;
+        font-size: 5.2rem;
+        color: var(--white-color);
+        text-shadow: 0 0 10px var(--primary-color);
+    }
+
+    .grid__row {
+        flex-direction: column;
+    }
+
+    .grid__column-4 {
+        width: 100%;
+    }
+
+    .khuyenmai-container__description {
+        padding-bottom: 0;
+    }
+}

@@ -87,3 +87,19 @@ td {
     margin: 4px 0;
     list-style:decimal ;
 }
+
+@media screen and (max-width: 47.9375em) {
+    .Dv__header {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        line-height: 2.7rem;
+    }
+
+    .Dv__header {
+        text-align: center;
+    }
+}

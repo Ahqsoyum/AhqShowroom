@@ -293,3 +293,35 @@
     line-height: 2.4rem;
     letter-spacing: 0.2px;
 }
+
+@media screen and (max-width: 47.9375em) {
+    .grid__column-6 {
+        width: 100%;
+    }
+
+    .product__color-img,
+    .product__main-background {
+        width: 100%;
+        background-size: contain;
+    }
+
+    .product__color-img {
+        padding: 0;
+    }
+
+    .product__item-color {
+        margin-bottom: 0;
+    }
+
+    .product__gallery-icon {
+        margin: auto 0;
+    }
+
+    .feature-section {
+        margin: 20px 0;
+    }
+
+    .feature-section__text {
+        margin-bottom: 30px;
+    }
+}

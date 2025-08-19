@@ -45,3 +45,19 @@ p {
     letter-spacing: 0.2px;
     margin: 8px 0;
 }
+
+@media screen and (max-width: 47.9375em) {
+    .Dv__header {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    }
+
+    .grid__column-4-36px {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .list {
+        height: 240px;
+    }
+}

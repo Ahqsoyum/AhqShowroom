@@ -33,3 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 })
+
+var filter = document.querySelector('.filter');
+var mobileFilter = document.querySelector('.grid__column-3-mobile');
+filter.addEventListener('click', () => {
+    mobileFilter.classList.add('active');
+});
+
+var closeFilter = document.querySelector('.filter-close-icon');
+closeFilter.addEventListener('click', ()=> {
+    mobileFilter.classList.remove('active');
+})

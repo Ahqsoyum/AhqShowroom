@@ -3,8 +3,9 @@
 }  
 
 .xe-main__background {
-    height: 400px;
+    height: 300px;
     width: 100%;
+    max-width: 100%;
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,6 +104,8 @@ button:hover {
     text-align: center;
     font-size: 2rem;
     margin: 24px 0 16px;
+    height: 4.8rem;
+    line-height: 2.4rem;
 }
 
 .product-type {
@@ -124,4 +127,118 @@ button:hover {
 
 .product-type__link:hover {
     color: var(--primary-color);
+}
+
+.filter {
+    display: none;
+}
+
+.grid__column-3-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 47.9375em) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .xe-main__background {
+        position: relative;
+        top: -100px;
+        margin-bottom: 0;
+    }
+
+    .grid__column-9 {
+        width: 100%;
+    }
+
+    .grid__column-3 {
+        display: none;
+    } 
+    
+    .grid__column-9-3 {
+        width: 50%;
+        margin-bottom: 28px;
+    }
+
+    .product-label {
+        margin: 12px 0 0;
+    }
+
+    .header__navbar-motobike-item, 
+    .header__navbar-car-item {
+        padding: 8px;
+    }
+
+    .filter {
+        display: block;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    .mobile-container {
+        margin-left: 12px;
+    }
+
+    .grid__column-3-mobile {
+        z-index: 100;
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: var(--white-color);
+        box-shadow: 0 0 0 1px #888;
+        width: 250px;
+        max-width: 100%;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease-in, opacity 0.3s ease-in, visibility 0.3s ease-in;
+    }
+
+    .grid__column-3-mobile.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .filter-close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2.4rem;
+        z-index: 101;
+        padding: 12px;
+    }
+
+    .filter-close-icon.active {
+        display: block;
+    }
+
+    .xe__sorting-select {
+        margin-top: 80px;
+    }
+
+    .button {
+        margin: 12px 0;
+    }
+
+    .product-name {
+        margin-bottom: 0;
+    }
+
+    .product-name,
+    .product-type__link,
+    .product-label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .product-type {
+        white-space: nowrap;
+    }
 }
