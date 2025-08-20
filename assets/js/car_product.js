@@ -54,7 +54,7 @@ async function initializeProductDetails() {
                             <div class="grid__column-6-3">
                                 <div class="product__header-info">
                                     Giá từ
-                                    <Span class="product__header-info-span">${data.price} VNĐ</Span>
+                                    <Span class="product__header-info-span">${data.price.toLocaleString('vi-VN')} VNĐ</Span>
                                 </div>
                             </div>
                         </div>

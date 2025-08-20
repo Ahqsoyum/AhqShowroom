@@ -119,14 +119,18 @@ if(adSendBtn) {
 var headerBars = document.querySelector('.header-menu-bars');
 var headerMenuMobile = document.querySelector('.header__navbar-menu-mobile');
 var headerCloseIcon = document.querySelector('.header-close-icon');
+var mobileFilter = document.querySelector('.grid__column-3-mobile');
+
 headerBars.addEventListener('click', () => {
     headerMenuMobile.classList.add('header__navbar-menu-mobile--active');
+    if (mobileFilter.classList.contains('active')) {
+        mobileFilter.classList.remove('active');
+    }
 });
 
 headerCloseIcon.addEventListener('click', () => {
     headerMenuMobile.classList.remove('header__navbar-menu-mobile--active')
 })
-
 
 var headerNavbarItems = document.querySelectorAll('.header__navbar-item');
 headerNavbarItems.forEach((item) => {
@@ -151,7 +155,7 @@ const slides = document.querySelectorAll('.slide');
       slide.classList.remove('active');
     });
 
-    if (slides[index]) { // Thêm kiểm tra này để đảm bảo slides[index] tồn tại
+    if (slides[index]) {
       slides[index].classList.add('active');
     }
 

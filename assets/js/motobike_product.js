@@ -32,7 +32,7 @@ async function initializeProductDetails() {
                         </div>
                     </div>
                     <div class="grid__column-6">
-                        <label class="product__label-price">Giá từ ${data.price} VNĐ</label>
+                        <label class="product__label-price">Giá từ ${data.price.toLocaleString('vi-VN')} VNĐ</label>
                             <div class="product__color-btn">
                                 <button class="product__color product__color--active" data-img-url="${data.background_img}">${data.color_1}</button>
                                 <button class="product__color" data-img-url="${data.background_img_2}">${data.color_2}</button>
@@ -40,7 +40,7 @@ async function initializeProductDetails() {
                                 <button class="product__color" data-img-url="${data.background_img_4}">${data.color_4}</button>
                             </div>
                         <div class="product__price">
-                            <div class="product__new-price">Giá chỉ từ: <span class="product__new-price--span">${data.price} VNĐ</span></div>
+                            <div class="product__new-price">Giá chỉ từ: <span class="product__new-price--span">${data.price.toLocaleString('vi-VN')} VNĐ</span></div>
                         </div>
                     </div>
                 </div>
