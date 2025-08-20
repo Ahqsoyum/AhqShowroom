@@ -1,28 +1,34 @@
+/* Get product */
 import {ref, onValue} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 
 let allProducts = [];
 
 function renderProducts(productsToRender) {
-    const xecontayContainer = document.getElementById('product-list');
-    xecontayContainer.innerHTML = '';
-
-    productsToRender.forEach(xe => {
-        const productHtmls = `
-            <div class="grid__column-9-3">
-                <div class="product">   
-                    <a href="motobike-product.html?type=xecontay&id=${xe.name}" class="product-img" style="background-image: url(${xe.background_img});"></a>
-                    <h4 class="product-name">${xe.name}</h4>
-                    <div class="product-price">${xe.price.toLocaleString('vi-VN')} đ</div>
-                    <label for="" class="product-label">${xe.description}</label>
-                    <div class="product-type">
-                        <span>Loại xe: </span>
-                        <a href="${xe.type}" class="product-type__link">xe côn tay</a>
+    const container = document.getElementById('product-list');
+    container.innerHTML = '';
+    
+    if (productsToRender && productsToRender.length > 0) {
+        productsToRender.forEach(xe => {
+            const formattedPrice = xe.price.toLocaleString('vi-VN');
+            const productHtmls = `
+                <div class="grid__column-9-3">
+                    <div class="product">
+                        <a href="motobike-product.html?type=xecontay&id=${xe.id}" class="product-img" style="background-image: url(${xe.background_img});"></a>
+                        <h4 class="product-name">${xe.name}</h4>
+                        <div class="product-price">${formattedPrice} đ</div>
+                        <label for="" class="product-label">${xe.description}</label>
+                        <div class="product-type">
+                            <span>Loại xe: </span>
+                            <a href="${xe.type}" class="product-type__link">xe côn tay</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        xecontayContainer.innerHTML += productHtmls;
-    });
+            `;
+            container.innerHTML += productHtmls;
+        });
+    } else {
+        container.innerHTML = '<p>Không có sản phẩm nào để hiển thị.</p>';
+    }
 }
 
 async function fetchProducts() {
@@ -30,35 +36,40 @@ async function fetchProducts() {
         await new Promise(resolve => setTimeout(resolve, 100));
     }
     const database = window.database;
-    if(database) {
-        const xecontay = ref(database, 'product/xemay/xecontay');
-        onValue(xecontay, (snap) => {
-            const xecontayData = snap.val();
-            if(xecontayData) {
-                allProducts = Object.values(xecontayData);
-                renderProducts(allProducts);
-            }
-        });
-    }
+    const xecontayRef = ref(database, 'product/xemay/xecontay');
+    
+    onValue(xecontayRef, (snap) => {
+        const xecontayData = snap.val();
+        if (xecontayData) {
+            allProducts = Object.keys(xecontayData).map(key => ({...xecontayData[key], id: key}));
+            renderProducts(allProducts);
+        } else {
+            allProducts = [];
+            renderProducts([]);
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
 });
 
-const sortingSelect = document.querySelector('.xe__sorting-select');
-if (sortingSelect) {
-    sortingSelect.addEventListener('change', (e) => {
-        const sortValue = e.target.value;
-        let sortedProducts = [...allProducts];
-
-        if (sortValue === 'low-to-high') {
-            sortedProducts.sort((a, b) => a.price - b.price);
-        } else if (sortValue === 'high-to-low') {
-            sortedProducts.sort((a, b) => b.price - a.price);
-        }
-        
-        renderProducts(sortedProducts);
+// Sửa đoạn code này để hoạt động trên cả desktop và mobile
+const sortingSelects = document.querySelectorAll('.xe__sorting-select');
+if (sortingSelects.length > 0) {
+    sortingSelects.forEach(sortingSelect => {
+        sortingSelect.addEventListener('change', (e) => {
+            const sortValue = e.target.value;
+            let sortedProducts = [...allProducts];
+            
+            if (sortValue === 'low-to-high') {
+                sortedProducts.sort((a, b) => a.price - b.price);
+            } else if (sortValue === 'high-to-low') {
+                sortedProducts.sort((a, b) => b.price - a.price);
+            }
+            
+            renderProducts(sortedProducts);
+        });
     });
 }
 

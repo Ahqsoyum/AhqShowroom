@@ -1319,4 +1319,18 @@ input {
         margin: 0 60px;
         text-align: center;
     }
+
+    .ad__body {
+        width: 90vw;
+        top: 4%;
+    }
+
+    .ad__background-img {
+        height: 300px;
+    }
+
+    #textarea {
+        margin-right: 0;
+        padding-right: 0;
+    }
 }

@@ -15,7 +15,7 @@ function renderProducts(productsToRender) {
                     <div class="product">
                         <a href="motobike-product.html?type=xetayga&id=${xe.id}" class="product-img" style="background-image: url(${xe.background_img});"></a>
                         <h4 class="product-name">${xe.name}</h4>
-                        <div class="product-price">${formattedPrice}</div>
+                        <div class="product-price">${formattedPrice} đ</div>
                         <label for="" class="product-label">${xe.description}</label>
                         <div class="product-type">
                             <span>Loại xe: </span>
@@ -50,37 +50,46 @@ async function fetchProducts() {
     });
 }
 
-const sortingSelect = document.querySelector('.xe__sorting-select');
-if (sortingSelect) {
-    sortingSelect.addEventListener('change', (e) => {
-        const sortValue = e.target.value;
-        let sortedProducts = [...allProducts];
-        
-        if (sortValue === 'low-to-high') {
-            sortedProducts.sort((a, b) => a.price - b.price);
-        } else if (sortValue === 'high-to-low') {
-            sortedProducts.sort((a, b) => b.price - a.price);
-        }
-        
-        renderProducts(sortedProducts);
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
     
+    // Sửa lỗi sắp xếp: Sử dụng querySelectorAll và forEach
+    const sortingSelects = document.querySelectorAll('.xe__sorting-select');
+    if (sortingSelects.length > 0) {
+        sortingSelects.forEach(sortingSelect => {
+            sortingSelect.addEventListener('change', (e) => {
+                const sortValue = e.target.value;
+                let sortedProducts = [...allProducts];
+                
+                if (sortValue === 'low-to-high') {
+                    sortedProducts.sort((a, b) => a.price - b.price);
+                } else if (sortValue === 'high-to-low') {
+                    sortedProducts.sort((a, b) => b.price - a.price);
+                }
+                
+                renderProducts(sortedProducts);
+            });
+        });
+    }
+    
+    /* Container Filter */
     var filter = document.querySelector('.filter');
     var headerNavbarMenu = document.querySelector('.header__navbar-menu-mobile');
     var mobileFilter = document.querySelector('.grid__column-3-mobile');
-    filter.addEventListener('click', () => {
-        mobileFilter.classList.add('active');
-        if (headerNavbarMenu.classList.contains('header__navbar-menu-mobile--active')) {
-            headerNavbarMenu.classList.remove('header__navbar-menu-mobile--active');
-        }
-    });
+
+    if (filter && mobileFilter) {
+        filter.addEventListener('click', () => {
+            mobileFilter.classList.add('active');
+            if (headerNavbarMenu && headerNavbarMenu.classList.contains('header__navbar-menu-mobile--active')) {
+                headerNavbarMenu.classList.remove('header__navbar-menu-mobile--active');
+            }
+        });
+    }
 
     var closeFilter = document.querySelector('.filter-close-icon');
-    closeFilter.addEventListener('click', ()=> {
-        mobileFilter.classList.remove('active');
-    });
+    if (closeFilter && mobileFilter) {
+        closeFilter.addEventListener('click', () => {
+            mobileFilter.classList.remove('active');
+        });
+    }
 });

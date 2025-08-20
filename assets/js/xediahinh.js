@@ -4,40 +4,50 @@ import {ref, onValue} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-d
 let allProducts = [];
 
 function renderProducts(productsToRender) {
-    const xediahinhContainer = document.getElementById('product-list');
-    xediahinhContainer.innerHTML = '';
-    productsToRender.forEach(xe => {
-        const formattedPrice = xe.price.toLocaleString('vi-VN');
-        const productHtmls = `
-            <div class="grid__column-9-3">
-                <div class="product">
-                    <a href="car-product.html?type=xediahinh&id=${xe.id}" class="product-img" style="background-image: url(${xe.background_img});"></a>
-                    <h4 class="product-name">${xe.name}</h4>
-                    <div class="product-price">${formattedPrice}</div>
-                    <label for="" class="product-label">${xe.description}</label>
-                    <div class="product-type">
-                        <span>Loại xe: </span>
-                        <a href="${xe.type}" class="product-type__link">${xe.name_type}</a>
+    const container = document.getElementById('product-list');
+    container.innerHTML = '';
+    
+    // Thêm kiểm tra để xử lý trường hợp không có sản phẩm
+    if (productsToRender && productsToRender.length > 0) {
+        productsToRender.forEach(xe => {
+            const formattedPrice = xe.price.toLocaleString('vi-VN');
+            const productHtmls = `
+                <div class="grid__column-9-3">
+                    <div class="product">
+                        <a href="car-product.html?type=xediahinh&id=${xe.id}" class="product-img" style="background-image: url(${xe.background_img});"></a>
+                        <h4 class="product-name">${xe.name}</h4>
+                        <div class="product-price">${formattedPrice} đ</div>
+                        <label for="" class="product-label">${xe.description}</label>
+                        <div class="product-type">
+                            <span>Loại xe: </span>
+                            <a href="${xe.type}" class="product-type__link">${xe.name_type}</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        xediahinhContainer.innerHTML += productHtmls;
-    });
+            `;
+            container.innerHTML += productHtmls;
+        });
+    } else {
+        container.innerHTML = '<p>Không có sản phẩm nào để hiển thị.</p>';
+    }
 }
 
 async function fetchProducts() {
+    // Logic chờ đợi window.database đã được giữ lại để đảm bảo tính tương thích
     while (!window.database) {
         await new Promise(resolve => setTimeout(resolve, 100));
     }
     const database = window.database;
 
-    const xediahinh = ref(database, 'product/xeoto/xediahinh');
-    onValue(xediahinh, (snap) => {
+    const xediahinhRef = ref(database, 'product/xeoto/xediahinh');
+    onValue(xediahinhRef, (snap) => {
         const xediahinhData = snap.val();
         if (xediahinhData) {
             allProducts = Object.keys(xediahinhData).map(key => ({...xediahinhData[key], id: key}));
             renderProducts(allProducts);
+        } else {
+            allProducts = [];
+            renderProducts([]); // Gọi renderProducts với mảng rỗng để hiển thị thông báo
         }
     });
 }
@@ -46,30 +56,35 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
 });
 
-const sortingSelect = document.querySelector('.xe__sorting-select');
-if (sortingSelect) {
-    sortingSelect.addEventListener('change', (e) => {
-        const sortValue = e.target.value;
-        let sortedProducts = [...allProducts];
-        
-        if (sortValue === 'low-to-high') {
-            sortedProducts.sort((a, b) => a.price - b.price);
-        } else if (sortValue === 'high-to-low') {
-            sortedProducts.sort((a, b) => b.price - a.price);
-        }
-        
-        renderProducts(sortedProducts);
+// Sửa lỗi sắp xếp: Sử dụng querySelectorAll và forEach
+const sortingSelects = document.querySelectorAll('.xe__sorting-select');
+if (sortingSelects.length > 0) {
+    sortingSelects.forEach(sortingSelect => {
+        sortingSelect.addEventListener('change', (e) => {
+            const sortValue = e.target.value;
+            let sortedProducts = [...allProducts];
+            
+            if (sortValue === 'low-to-high') {
+                sortedProducts.sort((a, b) => a.price - b.price);
+            } else if (sortValue === 'high-to-low') {
+                sortedProducts.sort((a, b) => b.price - a.price);
+            }
+            
+            renderProducts(sortedProducts);
+        });
     });
 }
 
+/* Container Filter */
 var filter = document.querySelector('.filter');
 var headerNavbarMenu = document.querySelector('.header__navbar-menu-mobile');
 var mobileFilter = document.querySelector('.grid__column-3-mobile');
+
 filter.addEventListener('click', () => {
     mobileFilter.classList.add('active');
     if (headerNavbarMenu.classList.contains('header__navbar-menu-mobile--active')) {
-            headerNavbarMenu.classList.remove('header__navbar-menu-mobile--active');
-        }
+        headerNavbarMenu.classList.remove('header__navbar-menu-mobile--active');
+    }
 });
 
 var closeFilter = document.querySelector('.filter-close-icon');
